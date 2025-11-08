@@ -74,7 +74,7 @@ export const POST = async (request: NextRequest) => {
       }
 
       const searchQuery = `${query} site:${pub.url}`;
-      const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(searchQuery)}`;
+      const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${encodeURIComponent(searchQuery)}&sort=date`;
 
       try {
         const response = await fetch(url);
