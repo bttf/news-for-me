@@ -59,8 +59,17 @@ export default function PublicationsSelector({
     }
   };
 
+  const handleOpenFrontPages = () => {
+    const selected = AVAILABLE_PUBLICATIONS.filter((pub) =>
+      selectedPublications.includes(pub.slug)
+    );
+    selected.forEach((pub) => {
+      window.open(`https://${pub.url}`, "_blank");
+    });
+  };
+
   return (
-    <div className="border border-gray-300 rounded p-4 mb-4">
+    <div className="border border-gray-300 rounded p-4 mb-4 relative">
       <h2 className="text-sm font-medium mb-3">Select Publications</h2>
       <div className="flex flex-wrap gap-3">
         {AVAILABLE_PUBLICATIONS.map((pub) => (
@@ -78,6 +87,15 @@ export default function PublicationsSelector({
           </label>
         ))}
       </div>
+      {selectedPublications.length > 0 && (
+        <button
+          onClick={handleOpenFrontPages}
+          className="absolute bottom-3 right-3 text-xs px-2.5 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+          title="Open front pages"
+        >
+          Open Sites
+        </button>
+      )}
     </div>
   );
 }
