@@ -61,9 +61,7 @@ export default function PublicationsSelector({
 
   return (
     <div className="border border-gray-300 rounded p-4 mb-4">
-      <h2 className="text-sm font-medium mb-3 text-gray-700">
-        Select Publications
-      </h2>
+      <h2 className="text-sm font-medium mb-3">Select Publications</h2>
       <div className="flex flex-wrap gap-3">
         {AVAILABLE_PUBLICATIONS.map((pub) => (
           <label
@@ -76,7 +74,7 @@ export default function PublicationsSelector({
               onChange={() => handleToggle(pub.slug)}
               className="w-4 h-4 cursor-pointer"
             />
-            <span className="text-sm text-gray-800">{pub.name}</span>
+            <span className="text-sm">{pub.name}</span>
           </label>
         ))}
       </div>

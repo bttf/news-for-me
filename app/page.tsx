@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-gray-900">News for Me</h1>
+      <h1 className="text-3xl font-bold mb-6">News for Me</h1>
       <PublicationsSelector
         selectedPublications={publications}
         onChange={setPublications}
