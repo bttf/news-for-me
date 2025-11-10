@@ -126,7 +126,7 @@ export default function PublicationsSelector({
         {AVAILABLE_PUBLICATIONS.map((pub) => (
           <label
             key={pub.slug}
-            className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 px-3 py-2 rounded transition-colors relative"
+            className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 px-3 py-2 rounded transition-colors relative"
             onMouseEnter={() => setHoveredSlug(pub.slug)}
             onMouseLeave={() => setHoveredSlug(null)}
           >
@@ -138,7 +138,7 @@ export default function PublicationsSelector({
             />
             <span className="text-sm">{pub.name}</span>
             {hoveredSlug === pub.slug && (
-              <div className="absolute z-10 bg-white border border-gray-300 rounded-lg shadow-lg p-5 w-96 left-full ml-2 top-0 pointer-events-none">
+              <div className="absolute z-10 bg-background border border-foreground/10 rounded-lg shadow-lg p-5 w-96 left-full ml-2 top-0 pointer-events-none">
                 <h3 className="font-semibold text-base mb-3 tracking-wide">
                   {pub.name}
                 </h3>
