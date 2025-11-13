@@ -16,6 +16,7 @@ const PUBLICATIONS: Publication[] = [
   { slug: "economist", name: "The Economist", url: "economist.com" },
   { slug: "wsj", name: "Wall Street Journal", url: "wsj.com" },
   { slug: "ft", name: "Financial Times", url: "ft.com" },
+  { slug: "hn", name: "Hacker News", url: "news.ycombinator.com" },
 ];
 
 interface SearchResultsProps {

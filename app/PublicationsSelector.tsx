@@ -70,6 +70,13 @@ const AVAILABLE_PUBLICATIONS: Publication[] = [
     description:
       "The Financial Times was founded in 1888 in London and holds a center to center-right, pro-business, globalist editorial position. With approximately 1 million digital subscribers, it's renowned for international business and financial coverage. Access requires a premium subscription at roughly $75/month ($900/year) with a metered paywall.",
   },
+  {
+    slug: "hn",
+    name: "Hacker News",
+    url: "news.ycombinator.com",
+    description:
+      "Founded in 2007 by Paul Graham and Y Combinator, Hacker News is a community-driven social news website focused on computer science, entrepreneurship, and technology. With millions of monthly visitors, it features user-submitted stories ranked by community votes and discussion quality. The platform maintains a tech-centric, intellectually curious culture. All content is completely free to access.",
+  },
 ];
 
 const STORAGE_KEY = "selected-publications";
