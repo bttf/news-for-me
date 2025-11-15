@@ -57,6 +57,13 @@ const AVAILABLE_PUBLICATIONS: Publication[] = [
       "Founded in 1843 in London, the Economist espouses classical liberal values—pro-market economics combined with socially progressive positions. With approximately 1.5 million print and digital subscribers, it's known for in-depth analysis and distinctive writing style. Access requires a subscription at roughly $17/month ($200/year) behind a strict paywall.",
   },
   {
+    slug: "bloomberg",
+    name: "Bloomberg",
+    url: "bloomberg.com",
+    description:
+      "Founded in 1990 by Michael Bloomberg, Bloomberg News is a global business and financial news leader reaching approximately 72 million monthly visitors. It maintains a centrist, pro-business editorial position focused on comprehensive coverage of markets, economy, and business news. Access requires a subscription at roughly $40/month with a metered paywall allowing limited free articles.",
+  },
+  {
     slug: "wsj",
     name: "Wall Street Journal",
     url: "wsj.com",
