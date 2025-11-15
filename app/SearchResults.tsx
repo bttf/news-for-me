@@ -1,23 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-
-interface Publication {
-  slug: string;
-  name: string;
-  url: string;
-}
-
-const PUBLICATIONS: Publication[] = [
-  { slug: "nyt", name: "The New York Times", url: "nytimes.com" },
-  { slug: "guardian", name: "The Guardian", url: "theguardian.com" },
-  { slug: "bbc", name: "BBC News", url: "bbc.com/news" },
-  { slug: "cnn", name: "CNN", url: "cnn.com" },
-  { slug: "aljazeera", name: "Al Jazeera", url: "aljazeera.com" },
-  { slug: "economist", name: "The Economist", url: "economist.com" },
-  { slug: "wsj", name: "Wall Street Journal", url: "wsj.com" },
-  { slug: "ft", name: "Financial Times", url: "ft.com" },
-  { slug: "hn", name: "Hacker News", url: "news.ycombinator.com" },
-];
+import { AVAILABLE_PUBLICATIONS } from "./publications";
 
 interface SearchResultsProps {
   query: string;
@@ -48,7 +31,7 @@ export default function SearchResults({
 
     // Open a Google search tab for each selected publication
     publications.forEach((pubSlug) => {
-      const pub = PUBLICATIONS.find((p) => p.slug === pubSlug);
+      const pub = AVAILABLE_PUBLICATIONS.find((p) => p.slug === pubSlug);
       if (pub) {
         const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}+site:${pub.url}`;
         const newWindow = window.open(searchUrl, "_blank");
