@@ -54,6 +54,10 @@ export default function PublicationsSelector({
     });
   };
 
+  const totalAnnualCost = AVAILABLE_PUBLICATIONS.filter((pub) =>
+    selectedPublications.includes(pub.slug)
+  ).reduce((sum, pub) => sum + pub.annualCost, 0);
+
   return (
     <div className="border border-gray-300 rounded p-4 mb-4 relative">
       <h2 className="text-sm font-medium mb-3">Select Publications</h2>
@@ -86,13 +90,18 @@ export default function PublicationsSelector({
         ))}
       </div>
       {selectedPublications.length > 0 && (
-        <button
-          onClick={handleOpenFrontPages}
-          className="absolute bottom-3 right-3 text-xs px-2.5 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-          title="Open front pages"
-        >
-          Open Sites
-        </button>
+        <>
+          <button
+            onClick={handleOpenFrontPages}
+            className="absolute bottom-3 right-3 text-xs px-2.5 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+            title="Open front pages"
+          >
+            Open Sites
+          </button>
+          <div className="mt-3 text-xs text-gray-500 dark:text-gray-400">
+            Total annual cost: ${totalAnnualCost.toLocaleString()}
+          </div>
+        </>
       )}
     </div>
   );
