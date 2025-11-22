@@ -56,6 +56,14 @@ export const AVAILABLE_PUBLICATIONS: Publication[] = [
     annualCost: 200,
   },
   {
+    slug: "atlantic",
+    name: "The Atlantic",
+    url: "theatlantic.com",
+    description:
+      "Founded in 1857 in Boston, The Atlantic is a center-left to liberal magazine known for long-form journalism and in-depth cultural and political analysis. With approximately 1 million digital and print subscribers, it attracts a highly educated readership. The publication operates on a freemium model with metered paywall, offering print subscriptions at around $40/year or roughly $3/month.",
+    annualCost: 40,
+  },
+  {
     slug: "bloomberg",
     name: "Bloomberg",
     url: "bloomberg.com",
