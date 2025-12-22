@@ -88,6 +88,14 @@ export const AVAILABLE_PUBLICATIONS: Publication[] = [
     annualCost: 900,
   },
   {
+    slug: "puck",
+    name: "Puck",
+    url: "puck.news",
+    description:
+      "Founded in 2021 by veteran journalists from major publications, Puck focuses on insider coverage of media, technology, Wall Street, and Washington power dynamics. Known for its exclusive scoops and newsletter-driven model, it attracts an influential readership seeking behind-the-scenes reporting. Access requires a subscription at approximately $10-13/month ($120-150/year).",
+    annualCost: 150,
+  },
+  {
     slug: "hn",
     name: "Hacker News",
     url: "news.ycombinator.com",
