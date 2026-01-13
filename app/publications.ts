@@ -96,6 +96,14 @@ export const AVAILABLE_PUBLICATIONS: Publication[] = [
     annualCost: 150,
   },
   {
+    slug: "freepress",
+    name: "The Free Press",
+    url: "thefp.com",
+    description:
+      "Founded in 2021 by Bari Weiss, a former New York Times opinion editor, The Free Press is an independent media company known for its centrist to center-right perspective and commitment to open inquiry and free speech. It features investigative journalism, essays, and podcasts covering politics, culture, and current affairs. Access operates on a freemium model with premium content requiring a subscription at approximately $8/month ($80/year).",
+    annualCost: 80,
+  },
+  {
     slug: "hn",
     name: "Hacker News",
     url: "news.ycombinator.com",
